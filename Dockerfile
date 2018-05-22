@@ -11,6 +11,7 @@ RUN \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/
 
-RUN go get -v github.com/Netflix-Skunkworks/go-jira
+RUN \
+  go get -v gopkg.in/Netflix-Skunkworks/go-jira.v1/cmd/jira
 
-ENTRYPOINT [ "go-jira" ]
+ENTRYPOINT [ "jira" ]
